@@ -1,0 +1,147 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+
+    background-color: #fff;
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* автоматический подсчет падингов  */
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+p{
+    margin: 0 0 10px;
+}
+
+/* Container  
+==============*/
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+/* HEADER  
+==============*/
+.header{
+    width: 100%;
+    height: 100px;
+    position: absolute; /* будет новым слоем поверх intro  */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between; /* чтобы разделить logo от nav  */
+    align-items: center; /* выравнивает nav с logo  */
+    padding: 35px 0;
+
+    border-bottom: 1px solid #515369; /* ПОЛОСА  */
+}
+/* Nav 
+===========*/
+.nav{
+    display: flex; /* элементы прилепают друг к другу  */
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase; /* text большими буквами  */
+}
+.nav__link{
+    color: #fff;
+    text-decoration: none;  /*  убираем подчеркивание */
+    opacity: 0.75;
+    margin-left: 50px;
+
+    transition: opacity .1s linear; /*  плавный переход */
+}
+.nav__link:first-child{  /*  первая ссылка */
+    margin-left: 0;
+}
+.nav__link:hover{
+    text-decoration: underline; /* делаем подчеркивание при наведении  */
+    opacity: 1;
+}
+/* INTRO
+=============*/
+.intro{
+    display: flex;  /* размещаем по цетру container */
+    flex-direction: column; /* размещаем по цетру container, каждый элемент будет с новой строки  */
+    justify-content: center; /* чтобы выровнять ячейку по центру блока */
+    height: 750px;
+    padding-top: 100px; /* ВНУТРЕННИЙ ОТСТУП */
+    background: #31344e url("./images/intro-bg.jpg") center no-repeat; /* пропорционально размещается  */
+}
+.intro__inner{
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+
+    text-align: center; /* text,p,button становиться по центру  */
+}
+.intro__title{
+    margin: 0 0 30px; /* 30px- расстояние до текста  ВНЕШНИЙ ОТСТУП */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 65px;
+    line-height: 1.1; /* или line-height: 71px; */
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+.intro__subtitle{
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+
+    margin-bottom: 60px;
+}
+/* BUTTON
+=============*/
+.btn{
+    display: inline-block; /* чтобы задавать падинги сверху и снизу*/
+    vertical-align: top; /* выравнивание по вертикальным границам */
+    padding: 14px 40px;
+
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .1s linear;
+}
+.btn--red{
+    background-color: #e84545;
+}
+.btn--red:hover{
+    background-color: #dd3434;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***      
+          
+          font-family: 'Cardo', serif;
